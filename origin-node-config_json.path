@@ -1,0 +1,20 @@
+--- config.json.orig	2018-04-28 17:17:39.770501058 +0300
++++ config.json	2018-04-28 17:19:59.921164664 +0300
+@@ -482,6 +482,17 @@
+ 		"ro"
+ 	    ]
+ 	},
++        {
++	    "type": "bind",
++	    "source": "/var/lib/iscsi",
++	    "destination": "/var/lib/iscsi",
++	    "options": [
++		"rbind",
++		"rslave",
++		"rw",
++		"mode=755"
++	    ]
++        },
+ 	{
+ 	    "destination": "/tmp",
+ 	    "type": "tmpfs",
